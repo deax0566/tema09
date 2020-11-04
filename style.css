@@ -1,0 +1,177 @@
+/** HJÆLP !!
+
+- bokse på forsiden
+- justify-content
+
+*/
+
+* {
+    max-width: 1200px;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+
+/*****************************
+******************************
+******************************
+********** Forside ***********
+******************************
+******************************
+*****************************/
+
+#forside {
+    display: inline;
+}
+
+#forside #splash_web {
+    display: none;
+}
+
+#forside #splash_mobil {
+    background-image: url(billeder_videoer/billede.png);
+    height: 400px;
+    width: 100%;
+}
+
+#forside #bokse {
+    padding: 20px 0;
+}
+
+#forside #bokse p {
+    padding: 20px;
+}
+
+#forside .boks {
+    margin: 20px 10px;
+    padding: 140px 0;
+}
+
+#forside #boks1 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks2 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks3 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks4 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks5 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks6 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks7 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#forside #boks8 {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+
+    /** SPLASH **/
+    #forside #splash_web {
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 800px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    #forside #splash_mobil {
+        display: none;
+    }
+
+    #forside .splash_video {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    #forside .velkommen {
+        position: absolute;
+        top: 70px;
+        left: 40%;
+        z-index: 100;
+    }
+
+    #forside .headline {
+        position: absolute;
+        top: 120px;
+        left: 40%;
+        z-index: 101;
+
+    }
+
+    /*** BOKSE ***/
+
+    #forside .boksene {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #forside .boks {
+        flex-grow: 1;
+        flex-basis: 100px;
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+/*****************************
+******************************
+******************************
+****** undersideknapper ******
+******************************
+******************************
+*****************************/
+
+undersideknapper #linje1,
+undersideknapper #linje2,
+undersideknapper #linje3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#undersideknapper .boks {
+    background-image: url(billeder_videoer/billede.png);
+    flex-grow: 1;
+    flex-basis: 100px;
+
+    height: 200px;
+}
