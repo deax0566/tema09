@@ -191,3 +191,57 @@ img {
 ******************************************
 ******************************************
 ******************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FAG */
+#fag .col_narrow {
+    height: 250px;
+    margin: 20px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#fag .specialefag {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#fag .idraetsfag {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#fag .almenefag {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#fag .interessefag {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+#fag .faellesfag {
+    background-image: url(billeder_videoer/billede.png);
+}
+
+
+@media (min-width: 1000px) {
+    #fag .sectionwrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #fag .col_narrow {
+        margin: 20px 20px;
+    }
+}
