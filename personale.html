@@ -1,3 +1,16 @@
+<!--
+- Hvorfor kun 10 personer på /personale på json?
+- Hvordan deler man personale ud under overskrifter hvis ikke med if else?
+-->
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="">
 
@@ -13,7 +26,7 @@
 
     <header>
         <div id="burgermenu">
-            <img src="billeder/burgermenu.svg" alt="burger">
+            <img src="" alt="burger">
         </div>
 
         <nav>
@@ -82,8 +95,9 @@
 
     <main>
         <h1 id="overskrift">Personale</h1>
-        <h2>Ledelse</h2>
+        <!--        <h2>Ledelse</h2>-->
         <section id="personale_oversigt_ledelse"></section>
+        <!--
         <h2>Administration</h2>
         <section id="personale_oversigt_administration"></section>
         <h2>Lærerteam</h2>
@@ -102,6 +116,7 @@
         <section id="personale_oversigt_event"></section>
         <h2>Bestyrelse</h2>
         <section id="personale_oversigt_bestyrelse"></section>
+-->
     </main>
 
 
@@ -127,7 +142,9 @@
 
 
         const url = "http://cilleabra.dk/kea/2_semester/tema_9/ihs/wordpress/wp-json/wp/v2/personale";
+
         const skabelon = document.querySelector("template").content;
+
         const listeLedelse = document.querySelector("#personale_oversigt_ledelse");
         const listeAdministration = document.querySelector("#personale_oversigt_administration");
         const listeLærerteam = document.querySelector("#personale_oversigt_lærerteam");
@@ -148,24 +165,47 @@
         }
 
         function visIndhold() {
-            console.log(indhold)
+            console.log(indhold);
 
             indhold.forEach(ansat => {
-                    const klon = skabelon.cloneNode(true);
-                    klon.querySelector(".billede").src = ansat.billede.guid;
-                    klon.querySelector(".navn").textContent = ansat.title.rendered;
-                    klon.querySelector(".beskrivelse").textContent = ansat.title.rendered;
-                    klon.querySelector(".stilling").textContent = ansat
-                        .title.rendered;
+                const klon = skabelon.cloneNode(true);
+                klon.querySelector(".billede").src = ansat.billede.guid;
+                klon.querySelector(".navn").textContent = ansat.navn;
+                klon.querySelector(".beskrivelse").textContent = ansat.beskrivelse;
+                klon.querySelector(".stilling").textContent = ansat.stilling;
+
+                personale_oversigt_ledelse.appendChild(klon);
 
 
-                    //                if (ansat.categories[0] == 11) {
-                    //                    console.log("bingo");
 
-                }
+                // if (ansat.categories[0] == '8') {
+                //     personale_oversigt_bestyrelse.appendChild(klon);
+                // } else if (ansat.categories[0] == '9') {
+                //    personale_oversigt_ledelse.appendChild(klon);
+                // }
+                //                else if (ansat.categories[0] == '10') {
+                //                    personale_oversigt_administration.appendChild(klon);
+                //                } else if (ansat.categories[0] == '11') {
+                //                    personale_oversigt_lærerteam.appendChild(klon);
+                //                } else if (ansat.categories[0] == '12') {
+                //                    personale_oversigt_ugekurser.appendChild(klon);
+                //                } else if (ansat.categories[0] == '13') {
+                //                    personale_oversigt_koekken.appendChild(klon);
+                //                } else if (ansat.categories[0] == '14') {
+                //                    personale_oversigt_praktisk.appendChild(klon);
+                //                } else if (ansat.categories[0] == '15') {
+                //                    personale_oversigt_rengoering.appendChild(klon);
+                //                } else if (ansat.categories[0] == '16') {
+                //                    personale_oversigt_marketing.appendChild(klon);
+                //                } else(ansat.categories[0] == '17') {
+                //                    personale_oversigt_event.appendChild(klon);
+                //                }
             })
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
