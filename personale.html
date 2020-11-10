@@ -151,15 +151,16 @@
             console.log(indhold)
 
             indhold.forEach(ansat => {
-                const klon = skabelon.cloneNode(true);
-                klon.querySelector(".billede").src = produkt.billede.guid;
-                klon.querySelector(".navn").textContent = produkt.title.rendered;
-                klon.querySelector(".beskrivelse").textContent = produkt.title.rendered;
-                klon.querySelector(".stilling").textContent = produkt.title.rendered;
+                    const klon = skabelon.cloneNode(true);
+                    klon.querySelector(".billede").src = ansat.billede.guid;
+                    klon.querySelector(".navn").textContent = ansat.title.rendered;
+                    klon.querySelector(".beskrivelse").textContent = ansat.title.rendered;
+                    klon.querySelector(".stilling").textContent = ansat
+                        .title.rendered;
 
 
-                if (ansat.categories[0] == 11) {
-                    console.log("bingo");
+                    //                if (ansat.categories[0] == 11) {
+                    //                    console.log("bingo");
 
                 }
             })
