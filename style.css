@@ -1,3 +1,121 @@
+/*********************************
+**********************************
+**********************************
+******** HEADER - START *********/
+
+/********* virker også i web *********/
+header {
+    background-color: #F5E8D7;
+    padding: 12px 0px;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 1.4em;
+    /*text-transform: uppercase;*/
+    color: #643939;
+    padding: 0px 12px;
+    /*font-family: pt serif;*/
+    font-family: noto sans;
+    line-height: 60px;
+}
+
+header a:hover {
+    color: #D69F82;
+}
+
+#menu {
+    max-width: 1200px;
+
+    list-style-type: none;
+    padding: 0;
+
+    text-align: left;
+
+}
+
+.hidden {
+    display: none;
+    transform: translateX(-100%);
+}
+
+/********* burger *********/
+
+
+#burgermenu {
+    display: inline-block;
+    max-width: 1200px;
+
+    margin: 5px 10px;
+}
+
+#burgermenu img {
+    height: 25px;
+}
+
+nav {
+    position: absolute;
+    align-items: center;
+    z-index: 100;
+    background-color: #F5E8D7;
+    opacity: 85%;
+    width: 100vw;
+}
+
+nav li:first-child {
+    padding-top: 20px;
+}
+
+nav li:last-child {
+    padding-bottom: 20px;
+}
+
+
+/********* mediaquery *********/
+
+@media (min-width: 1110px) {
+    #burgermenu {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    nav {
+        position: static;
+        background-color: #F5E8D7;
+        opacity: 100%;
+        width: 100%;
+    }
+
+    nav li:first-child {
+        padding-top: 0;
+    }
+
+    nav li:last-child {
+        padding-bottom: 0;
+    }
+
+    header a {
+        font-size: 1em;
+        line-height: normal;
+    }
+}
+
+
+
+/******** HEADER - SLUT **********
+**********************************
+**********************************
+**********************************
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
