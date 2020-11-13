@@ -97,7 +97,9 @@
         document.addEventListener("DOMContentLoaded", start);
 
 
-        const url = "http://cilleabra.dk/kea/2_semester/tema_9/ihs/wordpress/wp-json/wp/v2/pages/77";
+        const url = "http://cilleabra.dk/kea/2_semester/tema_9/ihs/wordpress/wp-json/wp/v2/fag?per_page=100"
+        const skabelon = document.querySelector("template").content;
+        const liste = document.querySelector("#interessefag_oversigt");
 
 
         async function start() {
@@ -107,9 +109,19 @@
         }
 
         function visIndhold() {
-            console.log(visIndhold)
-            document.querySelector("#interessefag_oversigt").innerHTML = indhold.content.rendered;
+            console.log(indhold);
 
+            indhold.forEach(ansat => {
+                const klon = skabelon.cloneNode(true);
+                klon.querySelector(".billede").src = ansat.billede.guid;
+                klon.querySelector(".navn").textContent = ansat.navn;
+                klon.querySelector(".kort").textContent = ansat.kort_tekst;
+                //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
+                klon.querySelector(".video").src = ansat.video.guid;
+
+                interessefag_oversigt.appendChild(klon);
+
+            })
         }
 
     </script>
