@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!--
+
 
 
     <header>
@@ -71,7 +71,7 @@
         </nav>
     </header>
 
--->
+
 
 
 
@@ -86,8 +86,20 @@
         </article>
     </template>
 
+
     <main>
-        <h1 id="overskrift">Alemene fag</h1>
+        <h1 id="overskrift">Almene fag</h1>
+        <p>
+            I denne fagblok er den demokratiske dannelse i fokus. Vi debatterer og perspektiverer på centrale emner der vedrører os alle. <br>
+
+            Fagene udfordrer din forestilling om både dig selv og din omverden. <br>
+
+            På Idrætshøjskolen Sønderborg gør vi os umage med, at sætte fokus på aktuelle emner og problemstillinger der er oppe i tiden. <br>
+
+            De forskellige fag udbydes på forskellige tidspunkter af året - se mere under de respektive fag. <br>
+
+            Der kan forekomme ændringer i fagudbuddet og pladser i hvert fag, da vi tager hensyn til årstid og elevantal.
+        </p>
         <section id="almene_fag_oversigt"></section>
     </main>
 
@@ -158,20 +170,19 @@
         function visIndhold() {
             console.log(indhold);
 
-            indhold.forEach(ansat => {
-                const klon = skabelon.cloneNode(true);
-                klon.querySelector(".billede").src = ansat.billede.guid;
-                klon.querySelector(".navn").textContent = ansat.navn;
-                klon.querySelector(".kort").textContent = ansat.kort_tekst;
-                //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
-                klon.querySelector(".video").src = ansat.video.guid;
+            indhold.forEach(enkeltfag => {
+                if (enkeltfag.categories[0] == 5) {
 
-                almene_fag_oversigt.appendChild(klon);
+                    const klon = skabelon.cloneNode(true);
+                    klon.querySelector(".billede").src = enkeltfag.billede.guid;
+                    klon.querySelector(".navn").textContent = enkeltfag.navn;
+                    klon.querySelector(".kort").textContent = enkeltfag.kort_tekst;
+                    //klon.querySelector(".lang").textContent = enkeltfag.lang_tekst;
+                    klon.querySelector(".video").src = enkeltfag.video.guid;
 
+                    almene_fag_oversigt.appendChild(klon);
+                }
             })
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

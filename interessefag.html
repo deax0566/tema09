@@ -12,7 +12,7 @@
 <body>
 
 
-<!--
+    <!--
     <header>
         <div id="burgermenu">
             <img src="billeder/burgermenu.svg" alt="burger">
@@ -71,6 +71,16 @@
         </nav>
     </header>
 -->
+
+    <template>
+        <article class="fag">
+            <img class="billede" src="">
+            <h2 class="navn"></h2>
+            <p class="kort"></p>
+            <!--            <p class="lang"></p>-->
+            <video class="video" src=""></video>
+        </article>
+    </template>
 
 
     <main>
@@ -142,20 +152,20 @@
         function visIndhold() {
             console.log(indhold);
 
-            indhold.forEach(ansat => {
-                const klon = skabelon.cloneNode(true);
-                klon.querySelector(".billede").src = ansat.billede.guid;
-                klon.querySelector(".navn").textContent = ansat.navn;
-                klon.querySelector(".kort").textContent = ansat.kort_tekst;
-                //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
-                klon.querySelector(".video").src = ansat.video.guid;
+            indhold.forEach(enkeltfag => {
+                if (enkeltfag.categories[0] == 6) {
 
-                interessefag_oversigt.appendChild(klon);
+                    const klon = skabelon.cloneNode(true);
+                    klon.querySelector(".billede").src = enkeltfag.billede.guid;
+                    klon.querySelector(".navn").textContent = enkeltfag.navn;
+                    klon.querySelector(".kort").textContent = enkeltfag.kort_tekst;
+                    //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
+                    klon.querySelector(".video").src = enkeltfag.video.guid;
 
+                    interessefag_oversigt.appendChild(klon);
+                }
             })
         }
-
     </script>
-</body>
 
-</html>
+</body></html>

@@ -1,168 +1,3 @@
-/*********************************
-**********************************
-**********************************
-******** HEADER - START *********/
-
-/********* virker også i web *********/
-/*header {
-    background-color: #F5E8D7;
-    padding: 12px 0px;
-}
-
-header a {
-    text-decoration: none;
-    font-size: 1.4em;
-    color: #643939;
-    padding: 0px 12px;
-    font-family: noto sans;
-    line-height: 60px;
-}
-
-header a:hover {
-    color: #D69F82;
-}
-
-#menu {
-    max-width: 1200px;
-
-    list-style-type: none;
-    padding: 0;
-
-    text-align: left;
-
-}
-
-.hidden {
-    display: none;
-    transform: translateX(-100%);
-}
-
-/********* burger *********/
-
-/*
-#burgermenu {
-    display: inline-block;
-    max-width: 1200px;
-
-    margin: 5px 10px;
-}
-
-#burgermenu img {
-    height: 25px;
-}
-
-nav {
-    position: absolute;
-    align-items: center;
-    z-index: 100;
-    background-color: #F5E8D7;
-    opacity: 85%;
-    width: 100vw;
-}
-
-nav li:first-child {
-    padding-top: 20px;
-}
-
-nav li:last-child {
-    padding-bottom: 20px;
-}
-
-
-/********* mediaquery *********/
-/*
-@media (min-width: 1110px) {
-    #burgermenu {
-        display: none;
-    }
-
-    #menu {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #menu.hidden {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    nav {
-        position: static;
-        background-color: #F5E8D7;
-        opacity: 100%;
-        width: 100%;
-    }
-
-    nav li:first-child {
-        padding-top: 0;
-    }
-
-    nav li:last-child {
-        padding-bottom: 0;
-    }
-
-    header a {
-        font-size: 1em;
-        line-height: normal;
-    }
-}
-
-
-
-/******** HEADER - SLUT **********
-**********************************
-**********************************
-**********************************
-
-/* Dropdown Button */
-/*.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-/*.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-/*.dropdown_content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-/*.dropdown_content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-/*.dropdown_content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-/*.dropdown:hover .dropdown_content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/*.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-
 /*Vi mangler:
 - Klaus mht. vimeo videoer str. ændring
 - Sidste småting på hver underside ift. design
@@ -218,6 +53,86 @@ p {
 }
 
 
+
+/* Dropdown Button */
+.dropbtn,
+.menu_punkt {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    background-color: blue;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown,
+.menu_punkt {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown_content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+nav li {
+    list-style: none;
+}
+
+
+#menu {
+    display: flex;
+}
+
+
+nav img {
+    width: 11%;
+}
+
+
+
+
+
+
 /***********************************Forside************************************/
 
 
@@ -236,6 +151,14 @@ display: none;
 
 
 /*mangler forside!*/
+
+
+
+
+
+
+
+
 
 
 /***********************************Generelt for column_wide og column_narrow***********************************/

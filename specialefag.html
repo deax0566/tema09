@@ -12,7 +12,7 @@
 <body>
 
 
-<!--
+    <!--
     <header>
         <div id="burgermenu">
             <img src="billeder/burgermenu.svg" alt="burger">
@@ -72,6 +72,16 @@
     </header>
 -->
 
+    <template>
+        <article class="fag">
+            <img class="billede" src="">
+            <h2 class="navn"></h2>
+            <p class="kort"></p>
+            <!--            <p class="lang"></p>-->
+            <video class="video" src=""></video>
+        </article>
+    </template>
+
 
     <main>
         <h1 id="overskrift">Specialefag</h1>
@@ -130,7 +140,7 @@
 
         const url = "http://cilleabra.dk/kea/2_semester/tema_9/ihs/wordpress/wp-json/wp/v2/fag?per_page=100"
         const skabelon = document.querySelector("template").content;
-        const liste = document.querySelector("#specialefag_oversigt");
+        const liste = document.querySelector("#idraetsfag_oversigt");
 
 
         async function start() {
@@ -142,20 +152,20 @@
         function visIndhold() {
             console.log(indhold);
 
-            indhold.forEach(ansat => {
-                const klon = skabelon.cloneNode(true);
-                klon.querySelector(".billede").src = ansat.billede.guid;
-                klon.querySelector(".navn").textContent = ansat.navn;
-                klon.querySelector(".kort").textContent = ansat.kort_tekst;
-                //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
-                klon.querySelector(".video").src = ansat.video.guid;
+            indhold.forEach(enkeltfag => {
+                if (enkeltfag.categories[0] == 3) {
 
-                specialefag_oversigt.appendChild(klon);
+                    const klon = skabelon.cloneNode(true);
+                    klon.querySelector(".billede").src = enkeltfag.billede.guid;
+                    klon.querySelector(".navn").textContent = enkeltfag.navn;
+                    klon.querySelector(".kort").textContent = enkeltfag.kort_tekst;
+                    //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
+                    klon.querySelector(".video").src = enkeltfag.video.guid;
 
+                    idraetsfag_oversigt.appendChild(klon);
+                }
             })
         }
-
     </script>
-</body>
 
-</html>
+</body></html>
