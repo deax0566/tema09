@@ -4,7 +4,7 @@
 ******** HEADER - START *********/
 
 /********* virker også i web *********/
-header {
+/*header {
     background-color: #F5E8D7;
     padding: 12px 0px;
 }
@@ -12,10 +12,8 @@ header {
 header a {
     text-decoration: none;
     font-size: 1.4em;
-    /*text-transform: uppercase;*/
     color: #643939;
     padding: 0px 12px;
-    /*font-family: pt serif;*/
     font-family: noto sans;
     line-height: 60px;
 }
@@ -41,7 +39,7 @@ header a:hover {
 
 /********* burger *********/
 
-
+/*
 #burgermenu {
     display: inline-block;
     max-width: 1200px;
@@ -72,7 +70,7 @@ nav li:last-child {
 
 
 /********* mediaquery *********/
-
+/*
 @media (min-width: 1110px) {
     #burgermenu {
         display: none;
@@ -117,7 +115,7 @@ nav li:last-child {
 **********************************
 
 /* Dropdown Button */
-.dropbtn {
+/*.dropbtn {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
@@ -126,13 +124,13 @@ nav li:last-child {
 }
 
 /* The container <div> - needed to position the dropdown content */
-.dropdown {
+/*.dropdown {
     position: relative;
     display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown_content {
+/*.dropdown_content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -142,7 +140,7 @@ nav li:last-child {
 }
 
 /* Links inside the dropdown */
-.dropdown_content a {
+/*.dropdown_content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -150,16 +148,280 @@ nav li:last-child {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown_content a:hover {
+/*.dropdown_content a:hover {
     background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown_content {
+/*.dropdown:hover .dropdown_content {
     display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+/*.dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+
+/*Vi mangler:
+- Klaus mht. vimeo videoer str. ændring
+- Sidste småting på hver underside ift. design
+- Forsiden
+- styling af navigationen
+- Af få lavet undernavigationen
+- At kopiere alt fra head ud på alle siderne
+- footeren
+- Personale side
+- fag
+- kontakt formular til footer + some
+- HUSK mobile first
+
+
+*/
+
+
+
+
+/***********************************Generelt************************************/
+* {
+    margin: 0;
+}
+
+
+
+main {
+
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+
+h1 {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h2 {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+p {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/***********************************Forside************************************/
+
+
+/*
+#overskrift {
+display: none;
+}
+*/
+
+
+#forside_video {
+    width: 100%;
+    padding-top: 16px;
+}
+
+
+
+/*mangler forside!*/
+
+
+/***********************************Generelt for column_wide og column_narrow***********************************/
+
+
+.column_wide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+
+}
+
+
+.column_narrow {
+    margin-right: 50px;
+
+}
+
+
+.column_narrow img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+
+}
+
+
+.column_narrow #player {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+
+}
+
+
+column_wide_text {}
+
+h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+/*********** KONTAKT - START *********
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+********** FOOTER - START ************/
+#footer {
+    color: white;
+}
+
+
+
+#footer .sectionwrapper {
+    background-color: #292929;
+    padding: 40px 20px 40px 20px;
+}
+
+
+
+#footer .col {
+    padding: 0px;
+    width: 100%;
+}
+
+
+
+#footer .txt,
+#footer .txt2 {
+    margin-top: 10px;
+}
+
+
+
+/*** Kontaktformular ***/
+#footer .bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+#footer .navn,
+#footer .email,
+#footer .besked {
+    background-color: #ffffff;
+    color: #b5b0a6;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+
+
+#footer .send {
+    background-color: #5a75d0;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+
+#footer .tele,
+#footer .mail {
+    margin-top: 10px;
+}
+
+
+
+/*** Information ***/
+#footer .overskrift {
+    margin-top: 20px;
+}
+
+
+
+#footer .txt {
+    margin-bottom: 20px;
+}
+
+
+
+/**MEDIAQUERY**/
+@media (min-width:800px) {
+
+
+
+    #footer .col {
+        flex-grow: 1;
+        flex-basis: 100px;
+        margin-right: 20px;
+    }
+
+
+
+    #footer .col:first-child {
+        flex-grow: 1;
+        margin-left: 20px;
+        margin-right: 60px;
+    }
+
+
+
+    @media (min-width:800px) {
+        #footer .overskrift {
+            margin-top: 0px;
+        }
+    }
+
+
+    .sectionwrapper {
+        display: flex;
+        Flex-wrap: wrap;
+    }
+
+    /*********** FOOTER - SLUT ***********
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+**************************************
+******* MEDIA QUERY - START **********/
