@@ -12,7 +12,6 @@
 <body>
 
 
-    <!--
     <header>
         <div id="burgermenu">
             <img src="billeder/burgermenu.svg" alt="burger">
@@ -70,7 +69,7 @@
             </ul>
         </nav>
     </header>
--->
+
 
     <template>
         <article class="fag">
@@ -140,7 +139,7 @@
 
         const url = "http://cilleabra.dk/kea/2_semester/tema_9/ihs/wordpress/wp-json/wp/v2/fag?per_page=100"
         const skabelon = document.querySelector("template").content;
-        const liste = document.querySelector("#idraetsfag_oversigt");
+        const liste = document.querySelector("#specialefag_oversigt");
 
 
         async function start() {
@@ -162,7 +161,7 @@
                     //                klon.querySelector(".lang").textContent = ansat.lang_tekst;
                     klon.querySelector(".video").src = enkeltfag.video.guid;
 
-                    idraetsfag_oversigt.appendChild(klon);
+                    specialefag_oversigt.appendChild(klon);
                 }
             })
         }
